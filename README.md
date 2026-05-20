@@ -41,7 +41,90 @@ O ESTACIONAMENTO ACME tem atuado em nossa cidade com ótimo atendimento e segura
 - [CT004] Cadastre, altere e exclua uma estadia.
 - [CT005] Altere pelo menos duas estadias preenchendo a **saida** e verificando se calcula o **valorTotal**.
 
-## Tecnologias
 
-## Passo a Passo de como executar e testar
+##  Tecnologias Utilizadas
 
+### Front-End
+- HTML5  
+- CSS3  
+- JavaScript  
+
+### Back-End
+- Node.js  
+- Express  
+- Prisma ORM  
+- CORS  
+- Dotenv  
+
+### Banco de Dados
+- MySQL  
+
+---
+
+##  Funcionalidades
+
+### Veículos
+
+- Cadastro de veículos  
+- Listagem de veículos  
+- Busca por placa  
+- Atualização de dados  
+- Exclusão de veículos  
+
+### Estadias
+
+- Cadastro de estadias  
+- Registro automático da entrada  
+- Registro de saída  
+- Cálculo automático do valor total  
+- Listagem de estadias  
+
+---
+
+##  Como Executar o Projeto
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/estacionamento-acme.git
+```
+
+2. Acesse a pasta:
+```bash
+cd api
+```
+
+3. Instale as dependências:
+```bash
+npm install
+```
+
+4. Configure o arquivo `.env`:
+```env
+PORT=3000
+DATABASE_URL="mysql://root@localhost:3306/estacionamento_acme"
+```
+
+5. Execute as migrations:
+```bash
+npx prisma migrate dev
+```
+
+6. Gere o Prisma Client:
+```bash
+npx prisma generate
+```
+
+7. Inicie o servidor:
+```bash
+npm run dev
+```
+
+---
+
+##  Funcionamento do Sistema
+
+1. O usuário cadastra um veículo  
+2. O atendente registra uma nova estadia  
+3. O sistema salva automaticamente a data e hora da entrada  
+4. Ao finalizar a estadia, o sistema registra a saída  
+5. O valor total é calculado automaticamente com base no tempo de permanência  
